@@ -50,7 +50,7 @@ const Cardsdesign = ({card}:{card:Icards}) => {
                      <div className="flex justify-between items-center p-4 mt-2">
                        <button
                          onClick={() => {
-                            
+                             
                             setIsSelected(true);
                             toast(`${card.name} added to stack!`);
        
