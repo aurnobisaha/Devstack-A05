@@ -52,7 +52,7 @@ function App() {
 
 
           
-          <div className='bg-white rounded-2xl border border-slate-200 p-5 mt-6 h-50'>
+          <div className='bg-white rounded-2xl border border-slate-200 p-5 mt-8 h-50'>
 
             <h2 className='text-2xl font-bold text-[#0F172A]'>
               Your Stack
