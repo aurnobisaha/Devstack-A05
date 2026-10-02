@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import React, {type Dispatch, type SetStateAction } from 'react';
 import type { Icards } from '../../types/cards';
 import { toast } from 'react-toastify';
 
-const Cardsdesign = ({card}:{card:Icards}) => {
-    const [isSelected,setIsSelected]= useState(false);
-    console.log(isSelected,"isSelected:");
+interface  ICardsdesignProps{
+  card:Icards;
+  selectedCards:Icards[];
+    setSelectedCards:Dispatch<SetStateAction<Icards[]>>;
+  
+}
+
+const Cardsdesign = ({card, selectedCards,setSelectedCards}:ICardsdesignProps) => {
+    const isSelected = selectedCards.some((selectedCard) => selectedCard.name === card.name);
+    //console.log(isSelected,"isSelected:");
     
                return (
                  <div key={card.name}  className="card bg-base-100 shadow-sm">
@@ -51,15 +58,17 @@ const Cardsdesign = ({card}:{card:Icards}) => {
                        <button
                          onClick={() => {
                              
-                            setIsSelected(true);
+                           setSelectedCards([...selectedCards, card]);
                             toast(`${card.name} added to stack!`);
        
                          }}
+                         disabled={isSelected}
                          className="btn w-full btn-wide bg-black text-white border-black disabled:bg-gray-400 disabled:text-gray-200 disabled:border-gray-400 disabled:cursor-not-allowed"
-                         disabled={isSelected === true ? true : false}
+                         
                        >
                         {isSelected === true ? "Selected": "Add to Stack"}
                        </button>
+                       
                      </div>
        
                    </div>
