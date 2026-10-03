@@ -3,6 +3,7 @@ import { Suspense, useState } from "react";
 import Nav from "./components/Nav";
 import Banner from "./components/Banner";
 import Cards from "./components/cards/cards";
+import Footer from "./components/Footer";
 
 import type { Icards } from "./types/cards";
 
@@ -129,6 +130,7 @@ function App() {
           </div>
         </div>
       </Suspense>
+      <Footer />
     </>
   );
 }
