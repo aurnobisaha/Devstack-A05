@@ -12,7 +12,7 @@ const AvailableCards = ({ cards, selectedCards,setSelectedCards }:IAvailableProp
 
   return (
    
-           <div className="col-span-3  grid grid-cols-3 gap-4 pl-15">
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-4 md:pl-15">
                 {cards.map((card: Icards) => {
                   return <Cardsdesign key={card.name} card={ card} selectedCards={selectedCards} setSelectedCards={setSelectedCards}/>;
                 })}

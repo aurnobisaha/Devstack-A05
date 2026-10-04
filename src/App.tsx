@@ -23,24 +23,24 @@ function App() {
       <Nav />
       <Banner />
 
-      <div className="px-25">
-        <h1 className="text-4xl font-bold text-[#0F172A]">
+      <div className="px-4 md:px-8 lg:px-25">
+        <h1 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
           Explore{" "}
           <span className="bg-gradient-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent">
             the Technologies
           </span>
         </h1>
 
-        <p className="text-[#64748B]">
+        <p className="text-[#64748B] mt-2">
           Pick one technology per category to build your ideal stack.
         </p>
       </div>
 
       <Suspense fallback={<h2>Loading.....</h2>}>
-        <div className="grid grid-cols-4 gap-6 px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 px-4 md:px-8 mt-6">
 
           
-          <div className="col-span-3">
+          <div className="lg:col-span-3">
             <Cards
               cardspromise={cardspromise}
               selectedCards={selectedCards}
@@ -49,7 +49,7 @@ function App() {
           </div>
 
          
-          <div className="bg-white rounded-2xl border border-slate-200 p-5 mt-8 self-start">
+          <div className="bg-white rounded-2xl border border-slate-200 p-5 mt-8 lg:mt-8 self-start">
 
             <h2 className="text-xl font-bold text-[#0F172A]">
               Your Stack
@@ -79,16 +79,16 @@ function App() {
                     className="border border-[#E2E8F0] rounded-lg p-3 flex items-center justify-between"
                   >
 
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 min-w-0">
 
                       <img
                         src={card.icon}
                         alt={card.name}
-                        className="w-8 h-8"
+                        className="w-8 h-8 shrink-0"
                       />
 
-                      <div>
-                        <p className="text-sm font-semibold text-[#0F172A]">
+                      <div className="min-w-0">
+                        <p className="text-sm font-semibold text-[#0F172A] truncate">
                           {card.name}
                         </p>
 
@@ -108,7 +108,7 @@ function App() {
                           )
                         );
                       }}
-                      className="text-[#94A3B8] hover:text-red-500 text-xl"
+                      className="text-[#94A3B8] hover:text-red-500 text-xl shrink-0 ml-2"
                     >
                       ×
                     </button>
@@ -119,7 +119,7 @@ function App() {
                 
                 <button
                   onClick={() => setSelectedCards([])}
-                  className="w-full border border-[#FCA5A5] text-[#D82C20] font-bold rounded-lg py-2 mt-12 text-sm font-semibold hover:bg-red-50"
+                  className="w-full border border-[#FCA5A5] text-[#D82C20] font-bold rounded-lg py-2 mt-12 text-sm  hover:bg-red-50"
                 >
                   Remove All
                 </button>

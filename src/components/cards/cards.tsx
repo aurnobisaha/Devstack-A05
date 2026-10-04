@@ -11,7 +11,7 @@ const Cards = ({ cardspromise, selectedCards, setSelectedCards }: cardsprops) =>
   const cards = use(cardspromise);
 
   return (
-    <div className=" mt-8">
+    <div className=" mt-8 px-4 md:px-6">
       
       <AvailableCards
         cards={cards}
