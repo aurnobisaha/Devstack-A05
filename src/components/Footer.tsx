@@ -4,8 +4,8 @@ import Logo from '../assets/logo-text.png';
 const Footer = () => {
     return (
         <footer className="bg-[#FFFFFF] mt-16">
-        <div className="container mx-auto pl-25 pr-6 ">
-            <div className=" bg-[#F1F5F9]  grid grid-cols-1 md:grid-cols-4 gap-35">
+        <div className="container mx-auto pl-6 md:pl-16 pr-6 ">
+            <div className=" bg-[#F1F5F9]  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-16 py-8">
                 <div>
                     <img src={Logo} alt="Logo" className="w-24" />
                     <p className="text-[#64748B] text-xs mt-4 max-w-full ">
