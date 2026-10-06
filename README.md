@@ -1,75 +1,33 @@
-# React + TypeScript + Vite
+Project Name
+Dev Stack Builder
+Description
+Dev Stack Builder is a web application where users can choose multiple techonology card to their stack, they can also remove all cards or single card and manage their  selected cards easily
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Technologies Used
+React
+TypeScript
+Vite
+Tailwind CSS
+React Toastify
+JSON
 
-Currently, two official plugins are available:
+Features
+Browse development technologies
+Build a personalized technology stack
+Add and remove technologies dynamically
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+1. What is JSX, and why is it used in React?
+JSX is written like HTML inside JavaScript. It is used to create UI in React
+2. What is the difference between props and state?
+Props used to pass data from parent component to child commponent. State used to store data that can change inside a component
+3.What does the useState hook do, and where did you use it in this project?
+The useState hook used to store and manage data in react. In this project, i used useState in App.tsx component to manage the selected technology cards. selectedCards stores the selected cards, and setSelectedCards updates the cards when i add or remove a technology.
+4. What does the useEffect hook do, and why did you need it to load the JSON data?
+   The useEffect hook used to perform tasks after a component renders, such as loading data. But i did not use useEffect in my project. I used fetch() and  use() hook to load the json data.
+5. Why does every item in a .map() list need a unique key prop?
+   A unique key helps react identifu each item in a list.
+6. What is conditional rendering?
+ Conditional rendering means showing something on the screen based on a condition. I used it to  show "No technologies yet" when  no card is selected, and to show  the selected cards when cards are selected.
+7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+A parent component pass data to a child component using props. A child send something back to the parents by using a function passed through props.
