@@ -1,20 +1,30 @@
-Project Name
-Dev Stack Builder
-Description
-Dev Stack Builder is a web application where users can choose multiple techonology card to their stack, they can also remove all cards or single card and manage their  selected cards easily
-
-Technologies Used
+Project Name:Dev Stack Builder
+<br>
+Description:Dev Stack Builder is a web application where users can choose multiple techonology card to their stack, they can also remove all cards or single card and manage their selected cards easily
+<br>
+Technologies Used:
+<br>
 React
+<br>
 TypeScript
+<br>
 Vite
+<br>
 Tailwind CSS
+<br>
 React Toastify
+<br>
 JSON
+<br>
 
-Features
+Features:
+<br>
 Browse development technologies
+<br>
 Build a personalized technology stack
+<br>
 Add and remove technologies dynamically
+<br>
 
 
 1. What is JSX, and why is it used in React?
